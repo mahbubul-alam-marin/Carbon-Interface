@@ -1,115 +1,88 @@
-import React, { useState, useEffect, useRef } from "react";
-import logo from "../assets/picture/logo.png"
+import { useState, useRef, useEffect } from "react";
+import { FaChevronDown } from "react-icons/fa";
+import logo from "../assets/picture/logo.png";
 
 const Navbar = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
-  const menuRef = useRef(null);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const dropdownRef = useRef(null);
 
-  const links = [
-    {
-      id: 1,
-      link: "Estimates",
-      dropdown: [
-        { id: 1, drlink: "Electricity Emissions" },
-        { id: 2, drlink: "Flight Emissions" },
-        { id: 3, drlink: "Vehicle Emissions" },
-        { id: 4, drlink: "Shipping Emissions" },
-        { id: 6, drlink: "Combustion Emissions" },
-      ],
-    },
-    { id: 2, link: "Carbon Ledger" },
-    { id: 3, link: "Documentation" },
-    { id: 4, link: "Login" },
-  ];
+  
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setDropdownOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target) &&
-        menuRef.current &&
-        !menuRef.current.contains(event.target)
-      ) {
-        setIsDropdownOpen(false);
-      }
-    };
+    return (
+        <nav className="flex justify-between items-center p-4 bg-white shadow-sm relative">
+           
+            <div className="flex items-center space-x-2 px-10">
+                <a href="/">
+                    <img src={logo} alt="logo" className="h-12" />
+                </a>
+            </div>
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+            
+            <ul className="flex text-lg space-x-8 text-gray-700 items-center">
+                
+               
+                <li className="relative" ref={dropdownRef}>
+                    <button
+                        className="flex items-center space-x-1 px-4 py-2 rounded-lg hover:bg-gray-200 transition-all"
+                        onClick={() => setDropdownOpen(!dropdownOpen)}
+                    >
+                        <span className="font-semibold text-gray-800">Estimates</span>
+                        <FaChevronDown className={`text-gray-600 text-sm mt-1 transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
+                    </button>
 
+                    {dropdownOpen && (
+                        <ul className="absolute right-0 text-xs font-bold mt-2 w-64 bg-white shadow-lg rounded-lg py-2 overflow-hidden z-50">
+                            <li className="px-6 py-3 hover:bg-gray-100 text-gray-800 flex items-center cursor-pointer">
+                                
+                                <a href="/electricity" className="ml-2">Electricity Emissions ⚡</a>
+                            </li>
+                            <li className="px-6 py-3 hover:bg-gray-100 text-gray-800 flex items-center cursor-pointer">
+                                
+                                <a href="/flights" className="ml-2">Flight Emissions ✈️</a>
+                            </li>
+                            <li className="px-6 py-3 hover:bg-gray-100 text-gray-800 flex items-center cursor-pointer">
+                               
+                                <a href="/vehicles" className="ml-2">Vehicle Emissions 🚙</a>
+                            </li>
+                            <li className="px-6 py-3 hover:bg-gray-100 text-gray-800 flex items-center cursor-pointer">
+                                
+                                <a href="/shipping" className="ml-2">Shipping Emissions 📦</a>
+                            </li>
+                            <li className="px-6 py-3 hover:bg-gray-100 text-gray-800 font-semibold flex items-center cursor-pointer">
+                                
+                                <a href="/fuel" className="ml-2">Fuel Combustion Emissions ⛽</a>
+                            </li>
+                        </ul>
+                    )}
+                </li>
 
+                
+                <li className="hover:text-blue-600 cursor-pointer font-semibold">Carbon Ledger</li>
+                <li className="hover:text-blue-600 cursor-pointer font-semibold">Documentation</li>
+                <li className="hover:text-blue-600 cursor-pointer font-semibold">Login</li>
+            </ul>
 
-  return (
-
-    <div class="grid grid-cols-3 gap-4 text-2xl items-center w-full h-20 text-gray-600 px-20">
-      
-      <div className="flex items-center w-80 space-x-2">
-        <img src={logo} alt="Carbon Interface Logo" className="h-8" />
-        
-      </div>
-
-      <div className="flex items-center space-x-2 ">
-      <ul className="flex justify-center text-center  items-center">
-        {links.map(({ id, link, dropdown }) => (
-          <li
-            key={id}
-            className="relative inline-flex text-2xl items-center px-4 cursor-pointer capitalize font-medium hover:text-blue-500 duration-300 whitespace-nowrap"
-          >
-            {dropdown ? (
-              <div
-                className="relative"
-                ref={menuRef}
-                onMouseEnter={() => setIsDropdownOpen(true)}
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)} 
-              >
-                <span>{link}</span>
-                {isDropdownOpen && (
-                  <ul
-                    className="absolute left-0 mt-2 w-40 bg-white shadow-md rounded-md"
-                    ref={dropdownRef}
-                    onMouseEnter={() => setIsDropdownOpen(true)}
-                    onMouseLeave={() => setIsDropdownOpen(false)} 
-                  >
-                    {dropdown.map(({ id, drlink }) => (
-                      <li
-                        key={id}
-                        className="px-4 py-2 text-sm hover:bg-gray-200 cursor-pointer"
-                      >
-                        {drlink}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ) : (
-              <span>{link}</span>
-            )}
-          </li>
-        ))}
-      </ul>
-
-      </div>
-      
-
-      <div className="flex justify-center">
-      <button className=" bg-blue-600 text-white font-bold py-2 cursor-pointer px-4 rounded text-lg hover:bg-blue-700">
-                Get started
-              </button>
-      </div>
-    
-
-    
-    
-  </div>
-
-
-
-    
-  );
+           
+            <div className="pr-10">
+                <a href="/get-started">
+                    <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all">
+                        Get Started
+                    </button>
+                </a>
+            </div>
+        </nav>
+    );
 };
 
 export default Navbar;
