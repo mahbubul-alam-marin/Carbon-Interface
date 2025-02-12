@@ -369,8 +369,8 @@ const Home = () => {
       {/**   sections 6th */}
       <section className="py-10">
         <div className="grid grid-cols-2 items-center px-10">
-          <div className="flex flex-col px-10">
-            <div className="py-4">
+          <div className="flex flex-col pl-30">
+            <div className="pb-4">
               <span className="text-green-800 rounded-full bg-green-200 uppercase py-1 px-2 text-xs ">
                 besefits
               </span>
@@ -414,8 +414,8 @@ const Home = () => {
 
       <section className="pt-10">
         
-        <div className="flex bg-gray-900 px-10  pb-10">
-          <div className="flex-auto p-5 border-b ">
+        <div className="flex bg-gray-900 px-10  p-10">
+          <div className="flex-auto p-5 pl-30 border-b w-fit ">
             <h1 className="text-2xl text-white font-bold pb-2">
               Add emissions estimates to your app today.
             </h1>
@@ -423,7 +423,7 @@ const Home = () => {
               Focus on your product and customer and leave the emissions to us.
             </p>
           </div>
-          <div className="flex-auto p-5 border-b">
+          <div className="flex-auto p-5 border-b w-fit">
             <a href="">
               {" "}
               <button className=" bg-blue-600 text-white font-bold py-2 cursor-pointer px-4 rounded text-lg hover:bg-blue-700">
