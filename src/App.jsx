@@ -1,19 +1,21 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Home from './components/Home'
-import Footer from './components/Footer'
-import Login from './components/page/Login'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Login from "./components/pages/Login";
 
 const App = () => {
   return (
-    <div>
-      <Navbar/>
-      <Home/>
-      <Footer/>
-      <Login/>
-      
-    </div>
-  )
-}
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
+};
 
-export default App
+export default App;
