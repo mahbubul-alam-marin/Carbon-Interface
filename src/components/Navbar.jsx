@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { FaChevronDown } from "react-icons/fa";
-import { Link } from "react-router-dom"; // Import React Router Link
+import { Link } from "react-router-dom"; // 
 import logo from "../assets/picture/logo.png";
 
 const Navbar = () => {
@@ -78,7 +78,7 @@ const Navbar = () => {
 
             {/* Get Started Button */}
             <div className="pr-10">
-                <Link to="/get-started">
+                <Link to="/register">
                     <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all">
                         Get Started
                     </button>

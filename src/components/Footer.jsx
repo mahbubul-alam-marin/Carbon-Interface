@@ -66,7 +66,7 @@ const Footer = () => {
 
 
   return (
-    <div className="bg-gray-900 grid grid-cols-4 px-10 text-center text-gray-500 pb-20">
+    <div className="bg-gray-900 grid grid-cols-4 px-10  text-center text-gray-500 py-20">
       <div className="flex flex-col px-2">
 
         <div className="flex space-x-2 px-10 pb-2">

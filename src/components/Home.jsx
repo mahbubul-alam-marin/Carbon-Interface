@@ -3,6 +3,7 @@ import Img1 from "../assets/picture/Carbon offset.jpg";
 import Img2 from "../assets/picture/purchases.jpg";
 import Img3 from "../assets/picture/shipping.jpg";
 import { FaCheck, FaCoffee } from "react-icons/fa";
+import { Link } from "react-router-dom"; 
 
 const Home = () => {
   const features = [
@@ -34,10 +35,11 @@ const Home = () => {
             Developers use Carbon Interface to power carbon measurement in their
             apps to <br /> combat climate change.
           </p>
-          <button className="bg-blue-600 font-bold text-2xl p-3 text-yellow-50 rounded-md cursor-pointer hover:scale-110 duration-300">
-            {" "}
-            Get Started for Free
-          </button>
+          <Link to="/register">
+                    <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all">
+                        Get Started
+                    </button>
+                  </Link> 
         </div>
       </section>
       {/*.2nd sections. */}
@@ -312,9 +314,11 @@ const Home = () => {
                 <li>✔️ No setup fee</li>
                 <li>✔️ 256-bit encryption</li>
               </ul>
-              <button className="mt-6 bg-blue-600 text-white font-bold py-2 px-4 rounded text-lg hover:bg-blue-700">
-                Get started for free
-              </button>
+              <Link to="/register">
+                    <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all">
+                        Get Started
+                    </button>
+                  </Link>
             </div>
           </div>
 
@@ -426,9 +430,11 @@ const Home = () => {
           <div className="flex-auto p-5 border-b w-fit">
             <a href="">
               {" "}
-              <button className=" bg-blue-600 text-white font-bold py-2 cursor-pointer px-4 rounded text-lg hover:bg-blue-700">
-                Get started for free
-              </button>
+              <Link to="/register">
+                    <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all">
+                        Get Started
+                    </button>
+                  </Link>  
             </a>
           </div>
         </div>
