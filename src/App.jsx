@@ -5,6 +5,11 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Login from "./components/pages/Login";
 import Registration from "./components/pages/Registration";
+import ElectricityEmissions from "./components/pages/ElectricityEmissions";
+import Flights from "./components/pages/Flights";
+import Vehicles from "./components/pages/Vehicles";
+import Shipping from "./components/pages/Shipping";
+import Fuels from "./components/pages/Fuels";
 
 
 const App = () => {
@@ -15,7 +20,14 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Registration/>}   />
+        <Route path="/electricityEmissions"  element={<ElectricityEmissions/>} />
+        <Route path="/flights"  element={<Flights/>} />
+        <Route path="/vehicles"  element={<Vehicles/>} />
+        <Route path="/shipping"  element={<Shipping/>} />
+        <Route path="/fuel"  element={<Fuels/>} />
+        
       </Routes>
+      
       <Footer />
     </Router>
   );

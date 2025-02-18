@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { FaChevronDown } from "react-icons/fa";
-import { Link } from "react-router-dom"; // 
+import { Link } from "react-router-dom"; 
 import logo from "../assets/picture/logo.png";
 
 const Navbar = () => {
@@ -46,7 +46,7 @@ const Navbar = () => {
                     {dropdownOpen && (
                         <ul className="absolute right-0 text-xs font-bold mt-2 w-64 bg-white shadow-lg rounded-lg py-2 overflow-hidden z-50">
                             <li className="px-6 py-3 hover:bg-gray-100 text-gray-800 flex items-center cursor-pointer">
-                                <Link to="/electricity" className="ml-2">Electricity Emissions ⚡</Link>
+                                <Link to="/electricityEmissions" className="ml-2">Electricity Emissions ⚡</Link>
                             </li>
                             <li className="px-6 py-3 hover:bg-gray-100 text-gray-800 flex items-center cursor-pointer">
                                 <Link to="/flights" className="ml-2">Flight Emissions ✈️</Link>
