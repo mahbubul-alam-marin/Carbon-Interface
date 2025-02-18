@@ -1,12 +1,8 @@
-import React from 'react'
-import ElectricPlant from '../../assets/picture/electric.jpg'
-import { Link } from 'react-router-dom'
-import HeroLayer from '../Layout/HeroLayer'
-import HowtoWork from '../Layout/HowtoWork'
-
-
-
-
+import React from "react";
+import ElectricPlant from "../../assets/picture/electric.jpg";
+import { Link } from "react-router-dom";
+import HeroLayer from "../Layout/HeroLayer";
+import HowtoWork from "../Layout/HowtoWork";
 
 const ElectricityEmissions = () => {
   return (
@@ -54,20 +50,16 @@ const ElectricityEmissions = () => {
 
       {/** sections 2nd */}
 
-      <section className='pt-8 pt-md-11'>
-        
-        <HowtoWork/>
-      </section>
- 
-
- {/** sections 4 & 5 */}
-      <section className='pt-8 pt-md-11'>
-       <HeroLayer/>
-
+      <section className="pt-8 pt-md-11">
+        <HowtoWork />
       </section>
 
+      {/** sections 4 & 5 */}
+      <section className="pt-8 pt-md-11">
+        <HeroLayer />
+      </section>
     </div>
   );
-}
+};
 
-export default ElectricityEmissions
+export default ElectricityEmissions;

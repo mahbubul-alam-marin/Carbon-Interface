@@ -10,6 +10,7 @@ import Flights from "./components/pages/Flights";
 import Vehicles from "./components/pages/Vehicles";
 import Shipping from "./components/pages/Shipping";
 import Fuels from "./components/pages/Fuels";
+import CarbonLedger from "./components/pages/CarbonLedger";
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/vehicles"  element={<Vehicles/>} />
         <Route path="/shipping"  element={<Shipping/>} />
         <Route path="/fuel"  element={<Fuels/>} />
+        <Route path="/carbon-ledger"  element={<CarbonLedger/>} />
         
       </Routes>
       
