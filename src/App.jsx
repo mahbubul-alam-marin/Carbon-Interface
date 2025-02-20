@@ -13,6 +13,7 @@ import Fuels from "./components/pages/Fuels";
 import CarbonLedger from "./components/pages/CarbonLedger";
 
 
+
 const App = () => {
   return (
     <Router>
@@ -28,10 +29,12 @@ const App = () => {
         <Route path="/fuel"  element={<Fuels/>} />
         <Route path="/carbon-ledger"  element={<CarbonLedger/>} />
         
+        
       </Routes>
       
       <Footer />
     </Router>
+    
   );
 };
 

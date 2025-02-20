@@ -1,5 +1,5 @@
 import React from "react";
-import ElectricPlant from "../../assets/picture/electric.jpg";
+import ElectricPlant from "../../assets/picture/electric.svg";
 import { Link } from "react-router-dom";
 import HeroLayer from "../Layout/HeroLayer";
 import HowtoWork from "../Layout/HowtoWork";
@@ -43,7 +43,7 @@ const ElectricityEmissions = () => {
           </div>
 
           <div className="flex-auto items-center px-20 m-5">
-            <img src={ElectricPlant} alt="" />
+            <img src={ElectricPlant} alt="" className="fill-red-400 stroke-orange-200 w-100 h-100 text-amber-200" />
           </div>
         </div>
       </section>
