@@ -1,48 +1,59 @@
 import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import logo from "../assets/picture/logo.png"
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const products = [
     {
       id: 1,
       title: "Carbon Ledger",
+      link: "/carbon-ledger"
     },
     { 
       id: 2,
-      title: "Electricity Emissions"
+      title: "Electricity Emissions",
+      link: "/electricityEmissions"
      },
      { 
       id: 3,
-      title: "Flight Emissions"
+      title: "Flight Emissions",
+      link: "/flights"
      },
      { 
       id: 4,
-      title: "Vehicle Emissions"
+      title: "Vehicle Emissions",
+      link: "/vehicles"
      },
      { 
       id: 5,
-      title: "Shipping Emissions"
+      title: "Shipping Emissions",
+      link:"/shipping"
      },
      { 
       id: 6,
-      title: "Fuel Combustion Emissions"
+      title: "Fuel Combustion Emissions",
+      link:"/fuel"
      },
      {
       id:7,
-      title:"Methodologies" 
+      title:"Methodologies",
+      link: "https://faint-class-d56.notion.site/Carbon-Interface-Methodology-d788fff61c724a48b100e0f7d77c0c57"
      }
   ];
 
   const Developers=[
     {id:1,
-      title:"Documentation"
+      title:"Documentation",
+      link:""
     },
     {id:2,
-      title:"Discord Community"
+      title:"Discord Community",
+      link:""
     },
     {id:3,
-      title:"Electricity Emissions Tutorial"
+      title:"Electricity Emissions Tutorial",
+      link:"/electricityEmissionTutorial"
     }
   ];
 
@@ -90,14 +101,14 @@ const Footer = () => {
           product
         </span>
         <ul>
-          {products.map(({id, title }) => (
-            <a href="">
+          {products.map(({id, title,link }) => (
+            <Link to={link}>
               <li key={id}
                 className="font-semibold hover:border-b-2 w-fit space-y-2 duration-200 py-1"
               >
                 {title}
               </li>
-            </a>
+            </Link>
           ))}
         </ul>
       </div>
@@ -109,15 +120,15 @@ const Footer = () => {
           developer
         </span>
         <ul>
-          {Developers.map(({id, title}) => (
-            <a href="">
+          {Developers.map(({id, title, link}) => (
+            <Link to={link}>
               <li
                 key={id}
                 className="font-semibold hover:border-b-2 w-fit space-y-2 duration-200 py-1"
               >
                 {title}
               </li>
-            </a>
+            </Link>
           ))}
         </ul>
       </div>

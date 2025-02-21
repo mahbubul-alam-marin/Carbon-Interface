@@ -53,11 +53,11 @@ const Home = () =>
         <div className="grid grid-cols-3 px-5 text-center">
           <div className="flex flex-col items-center text-center space-y-2">
             <h1 className="p-5 text-3xl">⚡</h1>
-            <a href="">
+            <Link to="/electricityEmissions">
               <h2 className="text-xl font-semibold text-blue-600 hover:border-b-2 duration-100">
                 Electricity
               </h2>
-            </a>
+            </Link>
             <p className="text-gray-500 text-sm max-w-xs">
               Estimates the carbon emissions of the power generation mix in the
               country or state provided in the request.
@@ -66,11 +66,11 @@ const Home = () =>
 
           <div className="flex flex-col items-center text-center space-y-2">
             <h1 className="p-5 text-3xl">✈️</h1>
-            <a href="">
+            <Link to="/flights">
               <h2 className="text-xl font-semibold text-blue-600 hover:border-b-2 duration-100">
                 Passenger Flights
               </h2>
-            </a>
+            </Link>
             <p className="text-gray-500 text-sm max-w-xs">
               Estimates the carbon emissions based on a number of passengers and
               distance between airports.
@@ -79,11 +79,11 @@ const Home = () =>
 
           <div className="flex flex-col items-center text-center space-y-2">
             <h1 className="p-5 text-3xl">🛳️</h1>
-            <a href="">
+            <Link to="/shipping">
               <h2 className="text-xl font-semibold text-blue-600 hover:border-b-2 duration-100">
                 Shipping
               </h2>
-            </a>
+            </Link>
             <p className="text-gray-500 text-sm max-w-xs">
               Estimates the carbon emissions that are generated from shipping
               goods between two locations.
@@ -94,11 +94,11 @@ const Home = () =>
         <div className="grid grid-cols-3 px-5 text-center pt-5">
           <div className="flex flex-col items-center text-center space-y-2">
             <h1 className="p-5 text-3xl">🚗</h1>
-            <a href="">
+            <Link to="/vehicles">
               <h2 className="text-xl font-semibold text-blue-600 hover:border-b-2 duration-100">
                 Vehicles
               </h2>
-            </a>
+            </Link>
             <p className="text-gray-500 text-sm max-w-xs">
               Estimate the carbon emissions generated from operating more than
               42,000 different vehicle models
@@ -107,11 +107,11 @@ const Home = () =>
 
           <div className="flex flex-col items-center text-center space-y-2">
             <span className="p-5 text-3xl">⛽</span>
-            <a href="">
+            <Link to="/fuel">
               <h2 className="text-xl font-semibold text-blue-600 hover:border-b-2 duration-100">
                 Fuel Combustion
               </h2>
-            </a>
+            </Link>
             <p className="text-gray-500 text-sm max-w-xs">
               Carbon emissions from static fuel combustion of over 12+ fuel
               sources in both volume and BTU
@@ -120,11 +120,11 @@ const Home = () =>
 
           <div className="flex flex-col items-center text-center space-y-2">
             <h1 className="p-5 text-3xl">💳</h1>
-            <a href="">
+            <Link to="/carbon-ledger">
               <h2 className="text-xl font-semibold text-blue-600 hover:border-b-2 duration-100">
                 Financial Transactions
               </h2>
-            </a>
+            </Link>
             <p className="text-gray-500 text-sm max-w-xs">
               Our Carbon Ledger product measures the climate impact of
               transaction data

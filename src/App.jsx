@@ -11,6 +11,7 @@ import Vehicles from "./components/pages/Vehicles";
 import Shipping from "./components/pages/Shipping";
 import Fuels from "./components/pages/Fuels";
 import CarbonLedger from "./components/pages/CarbonLedger";
+import ElectricityEmissionTutorial from "./components/pages/ElectricityEmissionTutorial";
 
 
 
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/shipping"  element={<Shipping/>} />
         <Route path="/fuel"  element={<Fuels/>} />
         <Route path="/carbon-ledger"  element={<CarbonLedger/>} />
+        <Route path="/electricityEmissionTutorial" element={<ElectricityEmissionTutorial/>} />
         
         
       </Routes>
