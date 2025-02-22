@@ -77,23 +77,26 @@ const Footer = () => {
 
 
   return (
-    <div className="bg-gray-900 grid grid-cols-4 px-10  text-center text-gray-500 py-20">
-      <div className="flex flex-col px-2">
-
-        <div className="flex space-x-2 px-10 pb-2">
-          <a href="/">
-                <img src={logo} alt="Carbon Interface Logo" className="h-8" /> 
-                </a>
-              </div>
-              <div className="flex px-10 text-left">
-              <p>The emissiond estimation platform.</p>
-              </div>
-              
-
-        <div >
-          
-        </div>
+    <div className="bg-gray-900 grid grid-cols-4 px-10 text-center text-gray-500 pb-20">
+  <div className="bg-gray-900 grid grid-cols-4 px-10">
+    <div className="flex flex-col px-2">
+      
+      {/* Logo Section */}
+      <div className="flex space-x-2 pb-2">
+        <a href="/">
+          <img src={logo} alt="Carbon Interface Logo" className="h-8" />
+        </a>
       </div>
+
+      {/* Description Section */}
+      <div className="text-left px-10">
+        <p>The emissiond estimation platform.</p>
+      </div>
+
+    </div>
+  </div>
+
+
 
       {/**product */}
       <div className="flex flex-col">
