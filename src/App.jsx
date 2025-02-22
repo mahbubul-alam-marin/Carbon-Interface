@@ -12,12 +12,14 @@ import Shipping from "./components/pages/Shipping";
 import Fuels from "./components/pages/Fuels";
 import CarbonLedger from "./components/pages/CarbonLedger";
 import ElectricityEmissionTutorial from "./components/pages/ElectricityEmissionTutorial";
+import ScrollToTop from "./components/ScrollToTOp";
 
 
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop/>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
